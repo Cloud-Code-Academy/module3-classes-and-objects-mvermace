@@ -26,7 +26,7 @@
  * Math class: https://developer.salesforce.com/docs/atlas.en-us.apexref.meta/apexref/apex_methods_system_math.htm
  * Classes: https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_classes_understanding.htm
  *
- * @author Your Name
+ * @author Mike Vermace
  */
 
 public with sharing class ClassesObjectsMethods {
@@ -40,17 +40,29 @@ public with sharing class ClassesObjectsMethods {
      */
     public static List<String> practiceStringMethods() {
         // Initialize a String with 'Hello, Salesforce!'
-        
-        // Get the length of the String        
+        String str = 'Hello, Salesforce!';
+        // Get the length of the String    
+        String len = str.length().toString();
         // Get a substring of the String of the first 5 characters
+        Integer startSubstr = 0;
+        Integer endSubstr = 5;
+        String substr = str.substring(startSubstr, endSubstr);
         // Convert the String to lower case
-        
-        // Return the list with the string data
+        String strLower = str.toLowerCase();
+
+       // Return the list with the string data
         // In the first position add the string length
         // In the second position add the substring
         // In the third position add the string in lower case
-
-        return null; // Replace null with the variable you used to store the result
+        List<String> strList = new List<String>{
+            len,
+            substr,
+            strLower
+        };
+  
+        System.debug('strList = '  + JSON.serialize(strList));
+        
+        return strList; // Replace null with the variable you used to store the result
     }
 
     /**
@@ -62,14 +74,21 @@ public with sharing class ClassesObjectsMethods {
      */
     public static List<Boolean> checkStringContent(String input) {
         // Initialize a list to store the results
+        List<Boolean> strBooleans = new List<Boolean>();
         
-        // Check if the string starts with 'Sales'
+        // Initialize misc settings
+        String startStr = 'Sales';
+        String endStr = 'Force';
+        String containsStr = 'Awesome';
         
-        // Check if the string ends with 'Force'
+        strBooleans.clear();
+        strBooleans.add(input.startsWith(startStr));
+        strBooleans.add(input.endsWith(endStr));
+        strBooleans.add(input.contains(containsStr));
         
-        // Check if the string contains 'Awesome'
-        
-        return null; // Replace null with the variable you used to store the result
+        System.debug('strBooleans = '  + JSON.serialize(strBooleans));
+
+        return strBooleans; 
     }
 
     /**
