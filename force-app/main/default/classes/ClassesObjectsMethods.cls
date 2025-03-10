@@ -59,9 +59,7 @@ public with sharing class ClassesObjectsMethods {
             substr,
             strLower
         };
-  
-        System.debug('strList = '  + JSON.serialize(strList));
-        
+          
         return strList; // Replace null with the variable you used to store the result
     }
 
@@ -100,15 +98,20 @@ public with sharing class ClassesObjectsMethods {
      */
     public static String removeDuplicateWords(String sentence) {
         // Split the sentence into words
-
+        List<String> splits = new List<String>();
+        splits = sentence.split(' ');
         // Create a set to store the unique words
-
+        Set<String> uniqueWords = new Set<String>();
         // Add each word to the set
-
+        for (String word : splits) {
+             uniqueWords.add(word); 
+        }
         // Join the unique words back into a sentence
-
+        List<String> uniqueWordsList = new List<String>(uniqueWords);
+        String returnString = String.join(uniqueWordsList,' ');
+        //returnString = uniqueWords.();
         // Return the sentence with unique words
-        return null; // Replace null with the variable you used to store the result
+        return returnString; // Replace null with the variable you used to store the result
     }
 
     /**
