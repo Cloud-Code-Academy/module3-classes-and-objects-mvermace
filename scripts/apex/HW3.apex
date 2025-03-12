@@ -31,3 +31,11 @@ List<Account> acc = [SELECT Id, Name FROM Account];
 for (Account a : acc) {
 system.debug(a.name);
 }
+
+// Q4
+String q4Str0 = 'Hello World!';
+Integer cntVowels = ClassesObjectsMethods.countVowels(q4Str0);
+System.debug(cntVowels.toString());
+
+String s = 'Hello World!'.substr(2);
+System.debug(s);

@@ -124,16 +124,16 @@ public with sharing class ClassesObjectsMethods {
      */
     public static Integer countVowels(String str) {
         // Initialize the result Integer
-
-        /*
-        for () {
-            // get individual characters from the string - hint use substring or split
-            // check if the character is a vowel
-            // if it is a vowel, increment the result Integer
+        Integer cntV = 0;
+        // Make List of single characters in str
+        List<String> listChars = str.split('');
+        // Iterate over List 
+        for (String s : listChars) {
+            if ( s.containsAny('aeiou') ) {    // Returns true if s is in 'aeiou'
+                cntV++;
+            }
         }
-        */
-
-        return null; // Replace null with the variable you used to store the result
+        return cntV; // Replace null with the variable you used to store the result
     }
 
     /**
