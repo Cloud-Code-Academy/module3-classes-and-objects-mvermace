@@ -146,18 +146,22 @@ public with sharing class ClassesObjectsMethods {
     public static String findTheScientist() {
         // The list of scientists' names
         List<String> scientistNames = new List<String>{'Tim Berners-Lee', 'Alan Turing', 'Grace Hopper', 'Donald Knuth', 'Guido van Rossum', 'Ken Thompson', 'Stephen Hawking'};
+        
+        String letterString = 'g';
+        String concatSep = ',';
+        String concatSci = '';                                  // The variable to store the concatenated string
 
-        // The variable to store the concatenated string
+        for (String name: scientistNames) {                     // Loop through the list of scientists' names
+            if (!name.toLowerCase().contains(letterString)) { continue; }     // If the name doesn't contain the letter 'G', skip this iteration
+            if (concatSci.length() > 0) {
+                concatSci = concatSci + concatSep + name;       // Add the name to the result string, followed by a comma
+            } else {
+                concatSci = name;   
+            }
+                         
+        }
 
-        // Loop through the list of scientists' names
-
-            // If the name doesn't contain the letter 'G', skip this iteration
-
-            // Add the name to the result string, followed by a comma
-
-        // Remove the last comma from the result string
-
-        return null; // Replace null with the variable you used to store the result
+        return concatSci; // Replace null with the variable you used to store the result
     }
 
     /**
@@ -169,12 +173,13 @@ public with sharing class ClassesObjectsMethods {
      * @return The absolute value of the difference
      */
     public static Double calculateDifferenceOfSquares(Double a, Double b) {
-        // Square the input numbers using the Math.pow() function
+        Integer power = 2;
+        Double sqa = Math.pow(a, power);    // Square the input numbers using the Math.pow() function
+        Double sqb = Math.pow(b, power);
 
         // Calculate the absolute difference using Math.abs() function
-
         // Return the result
-        return null; // Replace null with the variable you used to store the result
+        return Math.abs(sqa - sqb); // Replace null with the variable you used to store the result
     }
 
     /**
@@ -185,9 +190,9 @@ public with sharing class ClassesObjectsMethods {
      */
     public static Integer generateRandomNumber() {
         // Use Math class to generate number between 50 and 100
-
+        Integer i = 50 + Math.round(( Math.random() * 10 ));
         // Return the random integer
-        return null; // Replace null with the variable you used to store the result
+        return i; // Replace null with the variable you used to store the result
     }
 
     /**

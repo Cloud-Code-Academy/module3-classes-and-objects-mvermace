@@ -39,3 +39,5 @@ System.debug(cntVowels.toString());
 
 String s = 'Hello World!'.substr(2);
 System.debug(s);
+
+String listOfSci = ClassesObjectsMethods.findTheScientist();
