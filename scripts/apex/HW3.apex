@@ -41,3 +41,42 @@ String s = 'Hello World!'.substr(2);
 System.debug(s);
 
 String listOfSci = ClassesObjectsMethods.findTheScientist();
+
+// public class Book { 
+
+//     Public String title;
+//     Public String author;
+
+//     public Book(String title, String author){
+//         this.title = title;
+//         this.author = author;
+//     }
+
+//     public String getBookDetails() {
+//         return 'Title: ' + title + ', Author: ' + author;
+//     }
+// }
+
+// // Book b = new Book();
+// // b.title = 'Studmuffin Stories';
+// // b.author = 'Mike';
+// // String bds = b.getBookDetails();
+// // System.debug(bds);
+
+ClassesObjectsMethods.Book c = new ClassesObjectsMethods.Book('Novel', 'Mike');
+String bds2 = c.getBookDetails();
+System.debug(bds2);
+
+String s = ClassesObjectsMethods.createAndGetBookDetails();
+System.debug(s);
+
+ClassesObjectsMethods.Person p = new ClassesObjectsMethods.Person();
+p.setName('test name');
+p.setAge(30);
+String n = p.getName();
+System.debug(n);
+
+Person person1 = ClassesObjectsMethods.createPerson('Person1', 25);
+Person person2 = ClassesObjectsMethods.createPerson('Person2', 30);
+System.debug(person1);
+System.debug(person2);
