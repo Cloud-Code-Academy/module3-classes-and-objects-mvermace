@@ -98,8 +98,7 @@ public with sharing class ClassesObjectsMethods {
      */
     public static String removeDuplicateWords(String sentence) {
         // Split the sentence into words
-        List<String> splits = new List<String>();
-        splits = sentence.split(' ');
+        List<String> splits = sentence.split(' ');
         // Create a set to store the unique words
         Set<String> uniqueWords = new Set<String>();
         // Add each word to the set
