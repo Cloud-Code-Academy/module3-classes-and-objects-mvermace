@@ -148,16 +148,17 @@ public with sharing class ClassesObjectsMethods {
         
         String letterString = 'g';
         String concatSep = ',';
-        String concatSci = '';                                  // The variable to store the concatenated string
+        String concatSci = '';
 
-        for (String name: scientistNames) {                     // Loop through the list of scientists' names
-            if (!name.toLowerCase().contains(letterString)) { continue; }     // If the name doesn't contain the letter 'G', skip this iteration
+        for (String name: scientistNames) {
+            if (!name.toLowerCase().contains(letterString)) { 
+                continue;
+            }
             if (concatSci.length() > 0) {
-                concatSci = concatSci + concatSep + name;       // Add the name to the result string, followed by a comma
+                concatSci += concatSep + name;
             } else {
                 concatSci = name;   
             }
-                         
         }
 
         return concatSci; // Replace null with the variable you used to store the result
