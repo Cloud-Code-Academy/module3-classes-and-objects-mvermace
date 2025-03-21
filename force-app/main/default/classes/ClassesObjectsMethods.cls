@@ -190,7 +190,9 @@ public with sharing class ClassesObjectsMethods {
      */
     public static Integer generateRandomNumber() {
         // Use Math class to generate number between 50 and 100
-        Integer i = 50 + Math.round(( Math.random() * 10 ));
+        Integer min = 50;
+        Integer max = 100;
+        Integer i = Integer.valueOf(Math.random() * (max - min + 1)) + min;
         // Return the random integer
         return i; // Replace null with the variable you used to store the result
     }
